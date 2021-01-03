@@ -1,0 +1,95 @@
+html{
+	height: 100%;
+	margin: 0;
+}
+
+body{
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0px;
+	background-color:#f4f3f3;
+}
+
+.container{
+	width:100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header{
+	background:#8dcdeb;
+	border-bottom:#518bf0 3px solid;
+	height:90px;
+	width:100%;
+	padding-top:30px;
+	text-align: center;
+
+
+}
+
+.main-header{
+			text-align:center;
+			background-color: rgb(127, 127, 216);
+			height:100px;
+			width:100%;
+			margin:0px;
+		}
+
+#brandname{
+	float:left;
+	font-size:20px;
+	color: #fff;
+	margin: 5px;
+	text-align: center;
+}
+
+header h2{
+	text-align:center;
+	color:#fff;
+
+}
+
+.btn-info {background-color: #73b1e4;
+	height:40px;
+	width:100px;} /* Blue */
+.btn-info:hover {background: #78baf0;}
+
+.results{
+	border-radius: 10px 35px;
+    background: #677bb8;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
+
+/* Footer */
+.footer{
+    font-size: 14px;
+	padding: 20px;
+	flex-shrink: 0;
+	position: relative;
+	background: linear-gradient(45deg, #ffffff, #ffffff, #f9f9f9, #eeeeee, #e0e4e1, #d7e1ec);
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+	text-align: center;
+}
+
+.contact-icon{
+	color: #000000;
+	padding: 7px;
+}
+
+
+.contact-icon:hover{
+	color: #8c8c8c;
+}
+
+.footer-description{
+	margin: 0;
+	font-size: 12px;
+}
+
+/* Text Area */
+.ml-container{
+    margin: 30px 0;
+	flex: 1 0 auto;
+}

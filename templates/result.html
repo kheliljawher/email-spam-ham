@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spam Or Ham</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/js" href="../static/js/jquery.min.js">
+	<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/animated_favicon.gif') }}" type="image/x-icon">
+	
+</head>
+<body>
+	<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+	<a class="navbar-brand" href="/">
+	  <img src="../static/images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+	  Détecteur de Spam
+	</a>
+  </nav>
+	
+	<br><br>
+	<p style="text-align: center;"><b>Résultats</b></p>
+	<div style="text-align: center">
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Je t'ai eu! Ceci est un message SPAM. &#128528;</h2>
+	<img src="../static/images/call-span.gif">
+
+	{% elif prediction == 0%}
+	<h2 style="color:green;">Génial! Ce n'est PAS un message de spam. &#128512; </h2>
+	<img src="../static/images/not-spam.webp">
+	{% endif %}
+		<br><br>
+	<a href="/"><b>Retour à la page d'accueil</b></a>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+	<div class='footer' style="text-align:center;height:auto; background-color:#cac6b1;">
+	   <div class="contact-icon">
+		   <a target="_blank" href="https://github.com/kheliljawher/email-spam-ham"><i class="fab fa-github fa-lg contact-icon"></i></a>
+		   <a target="_blank" href="https://www.linkedin.com/in/jawher-khelil-a56a7612a/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+	   </div>
+	   <p class='footer-description'>Made with ❤️ by Jawher.</p>
+   </div>
+
+	
+
+</body>
+</html>

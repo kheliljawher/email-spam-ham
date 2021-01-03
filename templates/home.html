@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spam Or Ham</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/js" href="../static/js/jquery.min.js">
+	<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/animated_favicon.gif') }}" type="image/x-icon">
+	
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">   -->
+</head>
+<script>
+    function showloading() {
+        image = document.getElementById('loading_image');
+        image.style.display = 'inline'
+    }
+</script>
+<body>
+	
+	<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+	<a class="navbar-brand" href="/">
+	  <img src="../static/images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+	  Détecteur de Spam
+	</a>
+  </nav>
+
+<br><br>
+	<div class="ml-container" style="text-align: center">
+
+		<form action="{{ url_for('predict_fun')}}" method="POST" style="margin-top: 50px; width: 60%; text-align: center; margin: auto;" onsubmit="showloading()">
+			
+		<p><b> Entrer votre text ici</b></p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="6" cols="90" required placeholder="Votre text..."></textarea>
+		<br/>
+
+		<input type="submit" class="btn btn-primary" value="Prédire">
+	
+	</form>
+	<div style="text-align: center">
+        <img id="loading_image" style="display: none" src="../static/images/loading_.gif">
+    </div>
+		
+	</div> 
+	<br><br><br><br><br><br><br>
+
+
+	 <div class='footer' style="text-align:center;height:auto; background-color:#cac6b1;">
+		<div class="contact-icon">
+			<a target="_blank" href="https://github.com/kheliljawher/email-spam-ham"><i class="fab fa-github fa-lg contact-icon"></i></a>
+			<a target="_blank" href="https://www.linkedin.com/in/jawher-khelil-a56a7612a/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+		</div>
+		<p class='footer-description'>Made with ❤️ by Jawher.</p>
+	</div>
+
+</body>
+</html>
